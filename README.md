@@ -29,7 +29,9 @@ Este é um projeto simples de controle de despesas desenvolvido em JavaScript pu
 4. Vá para `consulta.html` para visualizá-las ou filtrá-las
 
 
-## 📦 Autor e Refatoração
+## 📦 Refatoração e Autor 
 
 Refatorado para separação de responsabilidades, organização modular e práticas modernas de desenvolvimento front-end.
 
+Desenvolvido por **Geraldo Luiz**  
+🌐 https://portfolio-geeh.netlify.app
