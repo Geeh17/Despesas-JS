@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <title>Consulta de despesas</title>
+  <link rel="shortcut icon" href="assets/icon.png" type="image/x-icon" sizes="32x32" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    crossorigin="anonymous" />
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-5">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img alt="Orçamento pessoal" height="35" src="assets/logo.png" width="50" />
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Cadastro</a></li>
+          <li class="nav-item active"><a class="nav-link" href="consulta.html">Consulta</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col">
+        <h1 class="display-4">Consulta de despesas</h1>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-2">
+        <input type="text" class="form-control" id="ano" placeholder="Ano" />
+      </div>
+      <div class="col-md-2">
+        <input type="text" class="form-control" id="mes" placeholder="Mês" />
+      </div>
+      <div class="col-md-2">
+        <input type="text" class="form-control" id="dia" placeholder="Dia" />
+      </div>
+      <div class="col-md-2">
+        <select class="form-control" id="tipo">
+          <option value="">Tipo</option>
+          <option value="1">Alimentação</option>
+          <option value="2">Educação</option>
+          <option value="3">Lazer</option>
+          <option value="4">Saúde</option>
+          <option value="5">Transporte</option>
+          <option value="6">Mensal</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <input type="text" class="form-control" id="descricao" placeholder="Descrição" />
+      </div>
+      <div class="col-md-2 d-flex justify-content-end">
+        <button type="button" class="btn btn-info d-flex align-items-center" onclick="pesquisarDespesa()">
+          <i class="fas fa-search mr-2"></i> Pesquisar
+        </button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <table class="table table-bordered table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th>Data</th>
+              <th>Tipo</th>
+              <th>Descrição</th>
+              <th>Valor</th>
+              <th>Ação</th>
+            </tr>
+          </thead>
+          <tbody id="listaDespesas"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/consulta.js" type="module"></script>
+</body>
+</html>
